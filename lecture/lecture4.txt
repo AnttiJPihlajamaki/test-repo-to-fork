@@ -1,0 +1,675 @@
+WEB PAD: Jari Aalto
+Will be emptied. Copy content.
+---------------------------------
+[TOP RIGHT] GEAR ICON / SETTINGS
+[ ] Authorship colors OFF
+Font Type: RobotoMono
+Language: English
+--------------------------------
+
+COURSE TUNI/TAMK 4A00HB29-3005 IT basics (Mon) / 2025-09-22 vk 39
+
+- "1" for attendance
+
+- G = Github missing.
+  Arvo, Karvonen, Kuusivaara, Lassheikki, Saarinen, Virolainen, Vuorela
+  Add course Github URL after your name
+  <lastname> <firstname> - http://github.com/login/tamk-4A00HB29-3005
+
+1 Akonniemi Aapo
+Arvo Aaro - G
+1 Flink Tuukka
+Hakala Artturi
+1 Hamdine Muhamed
+1 Hasoon Mustafa
+Hurmerinta Esteri
+1 Jääheimo Justus
+1 Kaijomaa Matias
+1 Kalavainen Otso
+1Karvonen Tomi - G
+1 Kettunen Aleksi
+1 Kivikangas Tommi
+Koivusalo Krista
+1 Kotilainen Heikki
+Kuusivaara Kalle - G
+1 Lassheikki Kirmo - G
+1 Lundgren Roosa-Maria
+Mikkonen Akseli
+1 Mäkipää Marianne
+Mäkitalo Irene
+1Onttonen Tino
+1 Pakarinen Leo
+1 Paloheimo Paula
+1 Peltola Anssi
+1 Peltonen Alexandra Anastasia
+1 Pihlajamäki Antti
+1 Puolamäki Eelis
+1 Rauhaniemi Jesse
+1 Risku Niina
+1 Robi Daniel
+Rokka Daniel
+1Rännäli Irina
+Saarinen Hannu - G
+1 Sainio Alexandra
+1 Salminen Alex
+1 Sankola Eemil
+1Sirozheva Sadbarh
+1 Suoperä Aatu
+1 Tuomaala Minttu
+1 Ukonaho Atte
+1 Vainikainen Aku
+1 Vesterinen Olli
+1 Vilka Alex
+Virolainen Meea - G
+Vuorela Jesse - G
+
+TIMETABLE AND GRADING
+
+    See https://is.gd/wOvMux (course description) for grading
+
+    week 39 Last lecture
+    week 40 Exam. Optional, submission for Grade 2 required before exam.
+    week 41 Exam (renewal). -- '' --
+    week 41 ... DEADLINE for grades 1-2 (Github)
+
+    Grade 1  Github: 10 files, 50 commits (pass)
+    Grade 2  Github: 20 files, 100 commits
+    Grade 3  Tasks: 50 % (19/38)
+    Grade 4  Tasks: 80 % (30/38)
+    Grade 5  Tasks: 100 % (38/38)
+
+LESSON HIGHLIGHTS
+
+    Github (4a)
+    - Making "forks" (copy repo to you)
+
+    Git and important files (4b)
+    - repository configuration
+      .git/config
+    - Ignoring files and directories
+      .gitignore
+
+    Internet (4c)
+    - Browser and search engines (Chrome)
+    - HTML-web pages (programming) CSS-style sheet
+
+    VSCode (4d)
+    - Terminal
+    - Git
+
+    Remote hosts (4e)
+    - host: linux-ssh.tuni.fi
+    - Operating system: Linux and basic commands
+
+    - - -
+
+    If time permits, advanced topics.
+
+    - Command line
+      + Making scripts
+      + Automating tasks with commnds
+
+* TOPIC 4a
+
+GITHUB AND FORKING A REPOSITORY
+
+    Fork = make a copy. Sama as "clone", but inside Github.
+
+    https://github.com/jaalto-tamk/test-repo-to-fork
+
+    Your PC     GITHUB
+    -------     ------------------
+
+                USER: X
+                +-- some repo ---+
+                |                |
+                +----------------+
+                 read access only
+
+                        |
+                        | FORK
+                        | "clone"
+                       \ /
+
+                YOU:
+                +-- cloned repo -+
+                |                |
+              +----------------+
+                read/write access
+
+     local  <-- clone
+     git clone clone http://git.com/<your login>/test-repo-to-fork
+
+    References:
+
+    - Github documentation
+      https://www.google.com/search?q=site%3Adocs.github.com+fork
+
+* TOPIC 4b
+
+THE REPOSITORY STRUCTURE FOR THE COURSE (EXAMPLE)
+
+    The structure:
+
+        <repository>    # course repository
+        | .gitignore    # ignore file
+        |
+        +- .git/        # data dir in local repo
+        |  config       # repository local config
+        |
+        +- doc/
+        |  git.txt
+        |  github.txt
+        |  command-line.txt
+        |  ...
+        |
+        +- lecture
+        |  lecture1.txt
+        |  lecture2.txt
+        |  ...
+        +- tasks
+           101.txt
+           102.txt
+           ...
+
+    IMPORTATNT FILES
+
+    Recall workflow:
+
+        https://cante.net/~jaalto/course/github/git-doc/git-workflow.pdf
+
+    Important files to know in a repository:
+
+    1. The ignore file (what to *not* commit)
+
+        .gitignore
+
+        An example:
+
+            # .gitignore
+
+            *.tmp
+            .vscode*
+            .DS_*
+
+            # End of file
+
+        See full example:
+        http://cante.net/~jaalto/course/github/git-ignore.txt
+
+        References:
+
+        - Git doc: ignoring files https://is.gd/bKHgEz
+        - https://git-scm.com/docs/gitignore
+        - https://docs.github.com/en/get-started/git-basics/ignoring-files
+        - http://gitignore.io
+
+    2. Repository local configuration file
+
+        .git/config
+
+        git remote --verbose
+
+        ... defines e.g. "origin" to point to Github.
+        ... edit manually or use "git remote ...." commands
+
+        References:
+
+        - https://git-scm.com/docs/git-remote
+        - https://docs.github.com/en/get-started/git-basics/managing-remote-repositories
+
+* TOPIC 4c
+
+INTERNET, PORTS AND HTML
+
+LESSON HIGHLIGHTS
+
+    - Intenet
+      + IETF, IANA, RFC
+      + Hosts, services
+      + protocols and port numbers
+
+    - HTTP and Web pages
+      + index.html
+      + HTML language
+
+    - Chrome
+      + making custom site search engine
+      + extensions
+
+INTERNET NETWORK PROTOCOLS AND PORT NUMBERS
+
+    Internet standards organization is
+    Internet Engineering Task Force (IETF)
+
+    The port numbers are governed by
+    Internet Assigned Numbers Authority (IANA)
+
+    The Intenet standards are called Request
+    For Comments (RFC) documents
+
+             IETF
+            /    \
+           /      \
+        IANA       RFC
+        ports:     Standards for protocols
+        http 80    http protocol  https://datatracker.ietf.org/doc/html/rfc2616
+        ...        ...
+
+INTERNET AND WEB PAGES
+
+    - HTTP-protocol basics (See URL)
+      https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/http_basics.html
+
+    A Browser (Chrome, Firefox, Safari etc):
+
+        CLIENT       SERVER
+        ------       ---------------
+        Chrome
+        ...URL ---->
+               <---- index.html
+                     HTML (web page)
+
+    To vide HTML page source
+
+        Right-click on page > View page source (C-u)
+
+        + Chrome
+        + Edge
+        + Mac Safari: right-click > Show Page Source (%-u)
+
+    To make a HTML page (programming):
+
+        https://www.w3schools.com/html
+
+INTERNET AND SEARCH ENGINES (BROWSER INTEGRATION)
+
+    Use case: define your own search engine
+    to make searches easier and faster to the
+    sites that you use.
+
+    2. Browser: an example in Chrome
+       - Chrome:
+         https://www.google.com/search?q=chrome+site+search+engine
+       - See also Edge
+         https://www.google.com/search?q=edge+search+engine+add
+
+       Define a custom search engine:
+
+         - chrome://settings/searchEngines
+         - Setting: Site search > Add
+
+         1. name: "Kela" (description)
+
+         2. Shortcut: "kela" ("word" to activate the search)
+
+         3. URL with %s in place of query
+
+         ... Do a search, copy Google URL to editro
+         ... Look closely results of Googlen URL line
+         ... clean up the URL and add "%s" to the end
+
+         https://www.google.com/search?q=site%3Akela.fi+%s
+                                         ===============
+
+       Few suggested keywords:
+
+         kela - kela.fi
+         vero - vero.fi
+         ghcoc - docs.github.com
+         gitdoc - git-scm.com
+         ...
+
+
+SSH REMOTE CONNECTIONS
+
+
+             SSH protocol (connect)
+    PC       ---------------------->  HOST
+    Terminal <---------------------
+
+    host: linux-ssh.tuni.fi
+    login: <your TUNI/TAMK username>  (see https://id.tuni.fi)
+    pass: <your TUNI/TAMK password>
+
+    Windows:
+
+    + Putty
+      Host: <host>
+      login: <login>
+
+    Linux, Mac and Windows "Git Bash":
+
+    + Teminal
+      ssh <login>@<host>
+
+COMMAND LINE - EDITORS
+
+    Basic
+
+        nano <file>
+        nano test.txt  # In Mac, runs pico(1)
+
+    Other editors (may need to be installed):
+
+        vim <file>     # :wq  write+quit
+        emacs <file>   # F10 menu
+
+    NOTE Mac: The default "TextEdit"
+    which writes files in RTF by default.
+
+        %-S-t   Format > Make Plain Text
+
+        Preferences > Format > Plain Text
+
+    In Mac, see also Sublime or older
+    TextMate.
+
+        brew install sublime-text
+
+        https://www.sublimetext.com
+
+COMMAND LINE - MANUAL PAGE READER
+
+    # Note: to refer to specific manual
+    # pages, you can see notations:
+    # ls(1), signal(2) or signal(7)
+
+    man [section] <page>
+
+    man man  # manual of the man(1) command
+    man ls   # manual of the ls(1) command
+    man 1 ls # Use [section] to refer to ls(1)
+    man cd
+
+    /<search by regexp>
+      n = next
+      N = previous / reverse direction
+
+    b   = prev page
+    SPC = next page
+    RET = one line forward
+
+    h = help
+    q = quit
+
+COMMAND LINE - EXERCISE
+
+    Try command "ls". What do the options mean?
+
+    ls -1aFl
+    ls -1 -a -F -l  # Same
+    ls -F -a -1 -l  # Same, any order
+
+    Tip, examine the manual page: "man ls"
+
+COMMAND LINE - COMMON LINUX COMMANDS
+
+    GETTING HELP
+
+    man     - manual pages
+              /<search>       n,N (next,prev)
+              g, b, SPC, RET  top,pageUp/Down,line
+
+    which   - display command path
+
+    whereis - display command path etc.
+              # See also:
+              type -a <command>
+              # See also
+              <command> -h
+              <command> --help
+
+    uname -a  System and OS information
+              See also:
+              cat /etc/os-release
+
+    ENVIRONMENT
+
+    env     - List environment variables
+    echo    - print
+              echo $HOME            # env variable
+              echo "HOME is $HOME"  # text with var
+
+    PATH OPERATIONS
+
+    cd      - change directory (".." = previous)
+    push .  - Save currect directory to stack
+    popd    - return to saved directory in stack
+
+    pwd     - print working directry (absolute path)
+
+    DIRECTORY OPERATIONS
+
+    mkdir   - make directory
+    rmdir   - remove directory; must be empty
+
+    FILE OPERATIONS
+
+    ls      - list files
+    tree    - list in tree-like format
+    touch   - change timestamp (also creates a file)
+
+    cp      - copy
+    mv      - move (same as rename)
+    rm      - remove files (can also rm directories)
+
+    cat     - display file content
+    head    - display from the beginning
+    tail    - display from the end
+
+    file    - determine file type
+    chmod   - change modes (permissions)
+
+    find    - find files etc.
+    grep    - search contents of files
+
+    REMOTE CONNECTIVITY
+
+    ssh     - SSH connect to remote
+    scp     - SSH transfer fies from/to remte
+
+    MISCELLANEOUS
+
+    date    - date and time
+    sort    - sort command
+
+COMMAND LINE - EXAMPLES
+
+    cd        # Go to $HOME directory
+    cd ~      # Go to (~) aka $HOME directory
+    cd $HOME  # go to location pointed by $HOME environment variable
+
+    cd ..     # Go to previous (up)
+    cd tmp    # Go to directory "tmp" (down)
+
+    mkdir ~/tmp      # make directory "tmp" under $HOME
+    rmdir ~/tmp      # remove directory
+
+    ls         # List files
+    ls -l      # List file: -l long listing
+    ls -la     # Lists files: -l long listing, -a all
+    ls -a -l   # one-char options can be separated
+    ls --help
+
+       See "ls -l" listing for more information:
+
+       d.......   = directory
+       -.......   = normal file
+
+    # Show files and directories as "tree"
+    tree
+    tree ~/tmp
+
+    # Update timestamp. Creates the file is not exists.
+    touch test.txt
+
+* TOPIC 4d
+
+THE VSCODE EDITOR
+
+    - The extension repository
+    - Terminals
+    - Git support
+
+    Documentation
+
+        https://code.visualstudio.com/docs/getstarted/userinterface
+        https://code.visualstudio.com/docs/getstarted/tips-and-tricks
+
+        Videos:
+        https://code.visualstudio.com/docs/getstarted/introvideos
+
+    A few key bindings
+
+        C-n     File > New Text File
+        C-s     File > Save
+        C-S-s   File > Save As
+        C-k C-o File > Open folder
+
+        C-,     File > Preferences > Settings
+        C-S-p   View > Command palette
+        C-A-b   Side Bar
+
+    Terminal
+
+        C-ö     View > Terminal (or "drag up")
+
+        CONFIGURATION
+
+        To set default terminal: cmd.exe
+
+        C-S-p  "Terminal: Select Default Profile"
+
+    Version control (Git)
+
+        C-S-e   Explorer
+        C-S-g   View > source Control
+        C-RET   commit
+
+        References:
+
+        - Using Git source control in VS Code
+          https://code.visualstudio.com/docs/sourcecontrol/overview
+
+        - Version control in VS Code
+          https://code.visualstudio.com/docs/introvideos/versioncontrol
+
+* TOPIC 4e
+
+THE LINUX COMMANDS
+
+    Available on:
+
+    - Mac
+    - Windows: comes with Git for Windows installation
+      + Git Bash terminal
+    - host: linux-ssh.tuni.fi
+      + TAMK INTRA: "Linux SSH"
+        https://is.gd/7rEecc
+      + Windows: use Putty to connect
+        Mac: open terminal and use command "ssh"
+
+    Operating Systems (OS) and command sets:
+
+        Windows (11) Linux OS      BSD
+        ------------ ------------  ---------------------------
+                     Debian,....   mac OS (= based on FreeBSD)
+        GUI          [GUI]         GUI
+        - DOS        - Linux       - Linux
+          dir.exe      ls            ls
+        - Powershell
+          ...
+        - Git Bash
+          Linux (limited set of functionality)
+          ... no manual pages (like "man ls")
+          ls.exe
+
+    References:
+
+    - Windows OS
+      7,9, 10, 11 (... 23H2 ... 24H2 ...)
+      https://en.wikipedia.org/wiki/Microsoft_Windows
+
+    - Linux OS
+      Debian, Ubuntu, Arch, mint, Fedora ...
+      https://en.wikipedia.org/wiki/Linux
+      https://distrowatch.com
+
+    - BSD OS
+      NetBSD, OpenBSD, FreeBSD, Mac (FreeBSD)
+      https://en.wikipedia.org/wiki/Comparison_of_BSD_operating_systems
+      https://en.wikipedia.org/wiki/MacOS
+
+COMMAND LINE / Linux
+
+    GETTING HELP
+
+    <command> -h
+    <command> --help
+
+    man <command>
+    whereis <command> # whereis git
+
+    CONTROL AND MANAGEMENT
+
+    C-l         # Clear screen
+    C-c         # interrupt
+
+    ENVIRONMENT AND PRINT
+
+    env         # Display envvars
+
+    echo "text"
+    echo $HOME
+
+    PATH OPERATIONS
+
+    pwd         # Print working directory
+
+    cd <dir>    # Change directory
+    cd          # goto HOME
+
+    ls          # List files
+    tree        # List in tree-like format
+
+    mkdir <dir> # Make directory
+    rmdir <dir> # Remove directory
+
+    FILE OPERATIONS (also DIR)
+
+    rm <file>   # delete file
+    rm -r <dir> # delete directory
+
+    cp A B      # copy file or dir from A to B
+    mv A B      # move file or dir from A to B
+
+    FILES
+
+    echo > file.txt # redirect to a file
+
+    OTHER COMMANDS
+
+    code .      # Open VSCode at current dir
+
+    open .      # Open Finder at curent dir
+    open ~      # open Finder at HOME dir
+
+    REMOTE CONNECTIVITY
+
+    ssh     - SSH connect to remote
+    scp     - SSH transfer fies from/to remte
+
+    REFERENCES
+
+    - see Google: "Linux commands"
+      https://www.google.com/search?q=linux+commands
+
+    - Note: the Linux commands are the same
+      in Mac. The Mac documentation is at
+      developer.apple.com
+      => "Command Line Primer"
+      https://is.gd/tWYBnH
+
+END OF FILE
+
